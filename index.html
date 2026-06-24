@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Buttons Layout</title>
+  <style>
+    /* Centers the 4-button grid on the website page */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f2f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Arranges the buttons into a 2x2 grid */
+    .button-layout {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px; /* Space between the buttons */
+      padding: 20px;
+    }
+
+    /* Base style for the buttons */
+    .nav-btn {
+      width: 160px;
+      height: 80px;
+      background-color: #4f46e5; /* Modern Indigo */
+      color: white;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      
+      /* This is what keeps the text perfectly in the middle of the button */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      /* Smooth animation when hovering */
+      transition: all 0.2s ease-in-out;
+    }
+
+    /* Hover effect to make it feel interactive */
+    .nav-btn:hover {
+      background-color: #4338ca;
+      transform: translateY(-2px); /* Slight lift effect */
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Active effect when clicked */
+    .nav-btn:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="button-layout">
+    <button class="nav-btn">Home</button>
+    <button class="nav-btn">About</button>
+    <button class="nav-btn">Projects</button>
+    <button class="nav-btn">Contact</button>
+  </div>
+
+</body>
+</html>
