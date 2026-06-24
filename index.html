@@ -1,71 +1,70 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centered Buttons Layout</title>
+  <title>Link Navigator</title>
   <style>
-    /* Centers the 4-button grid on the website page */
+    /* Centers the entire layout on the screen */
     body {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-color: #f0f2f5;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f172a; /* Sleek dark background */
+      font-family: 'Segoe UI', Roboto, sans-serif;
     }
 
-    /* Arranges the buttons into a 2x2 grid */
-    .button-layout {
+    /* Arranges the links into a 2x2 grid */
+    .link-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px; /* Space between the buttons */
+      gap: 25px; 
       padding: 20px;
     }
 
-    /* Base style for the buttons */
-    .nav-btn {
-      width: 160px;
-      height: 80px;
-      background-color: #4f46e5; /* Modern Indigo */
+    /* Styles the anchor tags to look and behave like buttons */
+    .button-link {
+      width: 180px;
+      height: 70px;
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8); /* Blue gradient */
       color: white;
       font-size: 18px;
       font-weight: 600;
-      border: none;
+      text-decoration: none; /* Removes the default underline */
       border-radius: 12px;
-      cursor: pointer;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 15px rgba(29, 78, 216, 0.3);
       
-      /* This is what keeps the text perfectly in the middle of the button */
+      /* Centers the text inside the button */
       display: flex;
       justify-content: center;
       align-items: center;
       
-      /* Smooth animation when hovering */
+      /* Smooth hover transition */
       transition: all 0.2s ease-in-out;
     }
 
-    /* Hover effect to make it feel interactive */
-    .nav-btn:hover {
-      background-color: #4338ca;
-      transform: translateY(-2px); /* Slight lift effect */
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    /* Hover effect: Lifts button and brightens the color */
+    .button-link:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(135deg, #60a5fa, #2563eb);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
     }
 
-    /* Active effect when clicked */
-    .nav-btn:active {
-      transform: translateY(0);
+    /* Click effect */
+    .button-link:active {
+      transform: translateY(-1px);
     }
   </style>
 </head>
 <body>
 
-  <div class="button-layout">
-    <button class="nav-btn">Home</button>
-    <button class="nav-btn">About</button>
-    <button class="nav-btn">Projects</button>
-    <button class="nav-btn">Contact</button>
+  <div class="link-container">
+    <a href="https://google.com" target="_blank" class="button-link">Google</a>
+    <a href="https://youtube.com" target="_blank" class="button-link">YouTube</a>
+    <a href="https://wikipedia.org" target="_blank" class="button-link">Wikipedia</a>
+    <a href="https://github.com" target="_blank" class="button-link">GitHub</a>
   </div>
 
 </body>
